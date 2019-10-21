@@ -7,4 +7,4 @@ const period;
 
 alert ('Привет первому занят' );
 
-console.log('World peace');
+console.log('World peace ;)');
