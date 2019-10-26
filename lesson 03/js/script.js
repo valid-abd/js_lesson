@@ -3,7 +3,7 @@
 let money = +prompt('Ваш месячный доход?'),
 		income = 'электрик',
 		addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую').split((',')),
-		deposit = confirm('Есть ли у вас депозит в банке?');
+		deposit = confirm('Есть ли у вас депозит в банке?'),
 		mission = 553000;
 		// budgetDayTwo = (money % 30);
 
@@ -29,13 +29,12 @@ console.log('budgetMonth: ', budgetMonth);
 let period = mission / budgetMonth
 console.log(Math.ceil(period));
 
-let budgetDay = (budgetDay / 30);
-console.log(Math.floor(budgetDay));
+let budgetDay = (budgetMonth / 30);
+console.log(Math.floor(budgetMonth));
 
 let option = (budgetDay >= 800) ? ' Высокий уровень дохода ' :
 	(budgetDay >= 300) ? ' Средний уровень дохода ' :
 	(budgetDay >= 0) ? 'Низкий уровень дохода' :
-
 	' Что то пошло не так ';
 
 console.log(option);
