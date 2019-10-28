@@ -19,6 +19,7 @@ showTypeOf(money);
 showTypeOf(addExpenses);
 showTypeOf(deposit);
 
+
 let getExpensesMonth = function() {
 	return questions2 + questions4;
 };
@@ -27,11 +28,16 @@ let getAccumulatedMonth = function(){
 	return money - getExpensesMonth();
 };
 
+let accumulatedMonth = getAccumulatedMonth();
+
 let budgetDay = Math.ceil(getAccumulatedMonth() / 30); 
 
 function getTargetMonth(mission, budget){
 	return ' Цель будет достигнута месяцев ' + Math.ceil(mission/ budget);
 }
+
+let period = mission / accumulatedMonth;
+console.log(Math.ceil(period));
 
 
 function getStatusIncome(){
