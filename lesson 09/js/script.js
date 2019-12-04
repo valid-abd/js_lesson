@@ -197,6 +197,17 @@ let appData = {
 			item.value = '';
 		});
 		
+			document.querySelectorAll('.expenses-items').forEach(function (item, i) {
+				if (i === 0) return;
+				item.remove();
+			});
+			MaxButton.style.display = 'block';
+
+			document.querySelectorAll('.income-items').forEach(function (item, i) {
+				if (i === 0) return;
+				item.remove();
+			});
+			MaxButton2.style.display = 'block';
 		startButton.style.display='block';
 		cancel.style.display='none';
 		startButton.disabled = true;
