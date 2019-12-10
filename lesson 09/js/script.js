@@ -177,10 +177,10 @@ let appData = {
 	},
 
 	reset() {
-		this.income = {} ;
-		this.addIncome = [] ;
-		this.expenses = {} ;
-		this.addExpenses = [] ;
+		this.income = {};
+		this.addIncome = [];
+		this.expenses = {};
+		this.addExpenses = [];
 		this.percentDeposit = 0 ;
 		this.moneyDeposit = 0 ;
 		this.deposit = false ;
@@ -190,13 +190,14 @@ let appData = {
 		this.expensesMonth = 0 ;
 		this.incomeMonth = 0 ;
 
-		document.querySelectorAll('.data input[type = text]').forEach(function(item){
-			item.disabled=false;
-		});
-		document.querySelectorAll('input[type = text]').forEach(function (item) {
-			item.value = '';
-		});
+		document.querySelectorAll('.data input[type = text]').forEach(function (item) {
+				item.disabled = false;
+			});
+		document.querySelectorAll(' input[type = text]').forEach(function (item) {
+				item.value = '';
+			});
 		
+
 			document.querySelectorAll('.expenses-items').forEach(function (item, i) {
 				if (i === 0) return;
 				item.remove();
@@ -204,13 +205,14 @@ let appData = {
 			MaxButton.style.display = 'block';
 
 			document.querySelectorAll('.income-items').forEach(function (item, i) {
-				if (i === 0) return;
+				if (i === 0 ) return;
 				item.remove();
 			});
 			MaxButton2.style.display = 'block';
-		startButton.style.display='block';
-		cancel.style.display='none';
-		startButton.disabled = true;
+
+			startButton.style.display = 'block';
+			cancel.style.display = 'none';
+			startButton.disabled = true;
 	},
 
 };
